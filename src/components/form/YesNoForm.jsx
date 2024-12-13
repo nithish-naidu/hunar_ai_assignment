@@ -1,12 +1,12 @@
-import { Box, Button } from "@mui/material";
-import { useQuestions } from "../../contexts/questions/context";
-import { QUESTION_ACTIONS } from "../../contexts/questions/reducer";
-import AddIcon from "@mui/icons-material/Add";
+import { Box, Button } from '@mui/material';
+import { useQuestions } from '../../contexts/questions/context';
+import { QUESTION_ACTIONS } from '../../contexts/questions/reducer';
+import AddIcon from '@mui/icons-material/Add';
 
-import formConfigObj from "../../forms_config/yesNo";
-import InputTextField from "../fields/InputTextField";
-import When from "../wrapper/When";
-import QuestionWrapper from "../wrapper/Question";
+import formConfigObj from '../../forms_config/yesNo';
+import InputTextField from '../fields/InputTextField';
+import When from '../wrapper/When';
+import QuestionWrapper from '../wrapper/Question';
 
 const YesNoForm = ({ id }) => {
   const { state, dispatch } = useQuestions();

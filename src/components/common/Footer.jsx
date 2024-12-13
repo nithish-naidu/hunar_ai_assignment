@@ -1,11 +1,11 @@
-import { Button, Toolbar } from "@mui/material";
-import { useQuestions } from "../../contexts/questions/context";
+import { Button, Toolbar } from '@mui/material';
+import { useQuestions } from '../../contexts/questions/context';
 import {
   getFormConfigObject,
   QUESTION_ACTIONS,
-} from "../../contexts/questions/reducer";
-import { isValidFieldValue } from "../../helper/validations";
-import { FooterAppBar } from "../../styles/components";
+} from '../../contexts/questions/reducer';
+import { isValidFieldValue } from '../../helper/validations';
+import { FooterAppBar } from '../../styles/components';
 
 const Footer = () => {
   const { state, dispatch } = useQuestions();
@@ -29,7 +29,7 @@ const Footer = () => {
       `[data-id="question-${questionId}"]`
     );
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
@@ -52,7 +52,7 @@ const Footer = () => {
         // Only perform validations for fields that aren't hidden
         if (!isHidden) {
           const error = isValidFieldValue(formData[questionId], validations);
-          onErrorHandler(questions[i], questionId, error === null ? "" : error);
+          onErrorHandler(questions[i], questionId, error === null ? '' : error);
 
           if (error && firstQuestionWithError === null) {
             firstQuestionWithError = questions[i];
@@ -71,7 +71,7 @@ const Footer = () => {
       state.allIds.forEach((question) => {
         finalResult.push({
           id: question,
-          answer: "",
+          answer: '',
           type: state.byId[question]?.type,
           ...state.byId[question]?.formData,
         });
@@ -87,9 +87,9 @@ const Footer = () => {
       elevation={0}
       color="default"
       position="fixed"
-      sx={{ top: "auto", bottom: 0 }}
+      sx={{ top: 'auto', bottom: 0 }}
     >
-      <Toolbar sx={{ justifyContent: "flex-end" }}>
+      <Toolbar sx={{ justifyContent: 'flex-end' }}>
         <Button variant="contained" onClick={onSaveHandler}>
           Save
         </Button>

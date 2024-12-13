@@ -1,5 +1,5 @@
-import { Box, TextField } from "@mui/material";
-import { validateOnChange } from "../../helper/validations";
+import { Box, TextField } from '@mui/material';
+import { validateOnChange } from '../../helper/validations';
 
 const InputTextField = ({
   id,
@@ -8,9 +8,9 @@ const InputTextField = ({
   onChange,
   onError,
   hasError = false,
-  errorMessage = "",
+  errorMessage = '',
   validations = [],
-  helperText = "",
+  helperText = '',
   fullWidth = true,
 }) => {
   const onChangeHandler = (event) => {
@@ -26,7 +26,7 @@ const InputTextField = ({
   };
 
   return (
-    <Box sx={{mb: 1.5}}>
+    <Box sx={{ mb: 1.5 }}>
       <TextField
         id={id}
         label={label}

@@ -1,9 +1,9 @@
-import { Box } from "@mui/material";
-import { useQuestions } from "../../contexts/questions/context";
-import { QUESTION_ACTIONS } from "../../contexts/questions/reducer";
+import { Box } from '@mui/material';
+import { useQuestions } from '../../contexts/questions/context';
+import { QUESTION_ACTIONS } from '../../contexts/questions/reducer';
 
-import formConfigObj from "../../forms_config/freeText";
-import InputTextField from "../fields/InputTextField";
+import formConfigObj from '../../forms_config/freeText';
+import InputTextField from '../fields/InputTextField';
 
 const FreeTextForm = ({ id }) => {
   const { state, dispatch } = useQuestions();

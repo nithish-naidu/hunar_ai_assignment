@@ -1,5 +1,5 @@
-import { Autocomplete, Box, Chip, TextField } from "@mui/material";
-import { validateOnChange } from "../../helper/validations";
+import { Autocomplete, Box, Chip, TextField } from '@mui/material';
+import { validateOnChange } from '../../helper/validations';
 
 const AutoCompleteField = ({
   id,
@@ -9,8 +9,8 @@ const AutoCompleteField = ({
   validations = [],
   onChange,
   onError,
-  hasError=false,
-  helperText = "",
+  hasError = false,
+  helperText = '',
 }) => {
   const onChangeHandler = (event, value) => {
     if (onChange) {
@@ -23,32 +23,32 @@ const AutoCompleteField = ({
   };
 
   return (
-    <Box sx={{mb: 1.5}}>
-    <Autocomplete
-      id={id}
-      value={value}
-      multiple
-      freeSolo
-      options={options}
-      onChange={onChangeHandler}
-      renderTags={(value, getTagProps) =>
-        value.map((option, index) => {
-          const { key, ...tagProps } = getTagProps({ index });
-          return (
-            <Chip variant="outlined" label={option} key={key} {...tagProps} />
-          );
-        })
-      }
-      renderInput={(params) => (
-        <TextField
-          error={hasError}
-          {...params}
-          variant="outlined"
-          label={label}
-          helperText={helperText}
-        />
-      )}
-    />
+    <Box sx={{ mb: 1.5 }}>
+      <Autocomplete
+        id={id}
+        value={value}
+        multiple
+        freeSolo
+        options={options}
+        onChange={onChangeHandler}
+        renderTags={(value, getTagProps) =>
+          value.map((option, index) => {
+            const { key, ...tagProps } = getTagProps({ index });
+            return (
+              <Chip variant="outlined" label={option} key={key} {...tagProps} />
+            );
+          })
+        }
+        renderInput={(params) => (
+          <TextField
+            error={hasError}
+            {...params}
+            variant="outlined"
+            label={label}
+            helperText={helperText}
+          />
+        )}
+      />
     </Box>
   );
 };

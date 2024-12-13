@@ -1,5 +1,5 @@
-import { createContext, useContext, useReducer } from "react";
-import questionsReducer from "./reducer";
+import { createContext, useContext, useReducer } from 'react';
+import questionsReducer from './reducer';
 
 const initState = {
   byId: {},

@@ -5,24 +5,24 @@ import {
   RadioGroup,
   useMediaQuery,
   useTheme,
-} from "@mui/material";
-import { useQuestions } from "../../contexts/questions/context";
-import { QUESTION_TYPE_LABEL, QUESTION_TYPES } from "../../helper/constants";
-import { QUESTION_ACTIONS } from "../../contexts/questions/reducer";
-import When from "../wrapper/When";
-import FreeTextForm from "../form/FreeTextForm";
-import { memo } from "react";
-import MCQForm from "../form/MCQForm";
-import YesNoForm from "../form/YesNoForm";
-import ImageBasedForm from "../form/ImageBasedForm";
-import QuestionWrapper from "../wrapper/Question";
+} from '@mui/material';
+import { useQuestions } from '../../contexts/questions/context';
+import { QUESTION_TYPE_LABEL, QUESTION_TYPES } from '../../helper/constants';
+import { QUESTION_ACTIONS } from '../../contexts/questions/reducer';
+import When from '../wrapper/When';
+import FreeTextForm from '../form/FreeTextForm';
+import { memo } from 'react';
+import MCQForm from '../form/MCQForm';
+import YesNoForm from '../form/YesNoForm';
+import ImageBasedForm from '../form/ImageBasedForm';
+import QuestionWrapper from '../wrapper/Question';
 
 const Question = ({ id, index }) => {
   const { state, dispatch } = useQuestions();
   const { type } = state.byId[id];
 
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const onChangeQuestionTypeHandler = (_, value) => {
     dispatch({

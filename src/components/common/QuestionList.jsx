@@ -1,17 +1,17 @@
-import { AccordionDetails, AccordionSummary, Box, Button } from "@mui/material";
-import { useQuestions } from "../../contexts/questions/context";
+import { AccordionDetails, AccordionSummary, Box, Button } from '@mui/material';
+import { useQuestions } from '../../contexts/questions/context';
 import {
   QUESTION_ACTIONS,
   selectAllQuestionIds,
-} from "../../contexts/questions/reducer";
-import Question from "./Question";
-import { Add, ExpandMore } from "@mui/icons-material";
-import { useMemo } from "react";
-import { getRequiredFields } from "../../helper/utils";
+} from '../../contexts/questions/reducer';
+import Question from './Question';
+import { Add, ExpandMore } from '@mui/icons-material';
+import { useMemo } from 'react';
+import { getRequiredFields } from '../../helper/utils';
 import {
   QuestionAccordionStyle,
   QuestionAccordionTitleStyle,
-} from "../../styles/components";
+} from '../../styles/components';
 
 const QuestionList = () => {
   const { state, dispatch } = useQuestions();

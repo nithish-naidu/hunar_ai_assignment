@@ -1,9 +1,9 @@
-import { Delete } from "@mui/icons-material";
-import { Box, IconButton, Paper } from "@mui/material";
-import { QuestionTitleStyle, SubQuestionIcon } from "../../styles/components";
+import { Delete } from '@mui/icons-material';
+import { Box, IconButton, Paper } from '@mui/material';
+import { QuestionTitleStyle, SubQuestionIcon } from '../../styles/components';
 
 const QuestionWrapper = ({
-  index=1,
+  index = 1,
   questionId,
   children,
   onDelete,
@@ -20,7 +20,7 @@ const QuestionWrapper = ({
         <Box display="flex" gap={1} alignItems="center">
           {isSubQuestion ? <SubQuestionIcon /> : <></>}
           <QuestionTitleStyle variant="h6">
-            {isSubQuestion ? "Sub" : ""} Quesiton {index}
+            {isSubQuestion ? 'Sub' : ''} Quesiton {index}
           </QuestionTitleStyle>
         </Box>
         <Box>

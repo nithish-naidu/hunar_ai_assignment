@@ -9,13 +9,13 @@ import {
   MenuItem,
   OutlinedInput,
   Select,
-} from "@mui/material";
-import { validateOnChange } from "../../helper/validations";
+} from '@mui/material';
+import { validateOnChange } from '../../helper/validations';
 
 const MultiSelectField = ({
   id,
   label,
-  value,  
+  value,
   onChange,
   onError,
   options = [],
@@ -53,7 +53,7 @@ const MultiSelectField = ({
           onChange={onChangeHandler}
           input={<OutlinedInput label={label} fullWidth />}
           renderValue={(selected) => (
-            <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
               {selected.map((value) => (
                 <Chip key={value} label={value} />
               ))}

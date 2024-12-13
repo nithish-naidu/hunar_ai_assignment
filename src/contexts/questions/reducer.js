@@ -1,18 +1,18 @@
-import freeTextFormConfig from "../../forms_config/freeText";
-import imageBasedFormConfig from "../../forms_config/imageBased";
-import multipleChoiceFormConfig from "../../forms_config/multipleChoice";
-import yesNoFormConfig from "../../forms_config/yesNo";
-import { QUESTION_TYPES } from "../../helper/constants";
-import { generateRandomID } from "../../helper/utils";
+import freeTextFormConfig from '../../forms_config/freeText';
+import imageBasedFormConfig from '../../forms_config/imageBased';
+import multipleChoiceFormConfig from '../../forms_config/multipleChoice';
+import yesNoFormConfig from '../../forms_config/yesNo';
+import { QUESTION_TYPES } from '../../helper/constants';
+import { generateRandomID } from '../../helper/utils';
 
 export const QUESTION_ACTIONS = {
-  ADD_QUESTION: "ADD_QUESTION",
-  DELETE_QUESTION: "DELETE_QUESTION",
-  UPDATE_QUESTION_TYPE: "UPDATE_QUESTION_TYPE",
-  ON_FORM_FIELD_CHANGE: "ON_FORM_FIELD_CHANGE",
-  ON_FORM_FIELD_ERROR: "ON_FORM_FIELD_ERROR",
-  TOGGLE_SUB_QUESTION: "TOGGLE_SUB_QUESTION",
-  SET_PREVIEW_FORM_DATA: "SET_PREVIEW_FORM_DATA",
+  ADD_QUESTION: 'ADD_QUESTION',
+  DELETE_QUESTION: 'DELETE_QUESTION',
+  UPDATE_QUESTION_TYPE: 'UPDATE_QUESTION_TYPE',
+  ON_FORM_FIELD_CHANGE: 'ON_FORM_FIELD_CHANGE',
+  ON_FORM_FIELD_ERROR: 'ON_FORM_FIELD_ERROR',
+  TOGGLE_SUB_QUESTION: 'TOGGLE_SUB_QUESTION',
+  SET_PREVIEW_FORM_DATA: 'SET_PREVIEW_FORM_DATA',
 };
 
 export const getFormConfigObject = (type) => {
@@ -34,7 +34,7 @@ export const getInitialFormFields = (type) => {
   const hiddenFields = {};
 
   formConfigObj.forEach((question, index) => {
-    const { id, default: defaultValue = "", isSubQuestion = false } = question;
+    const { id, default: defaultValue = '', isSubQuestion = false } = question;
 
     // Discover potential issues during development
     if (!id)
@@ -43,7 +43,7 @@ export const getInitialFormFields = (type) => {
       );
 
     formData[id] = defaultValue;
-    errorFields[id] = "";
+    errorFields[id] = '';
 
     if (isSubQuestion) {
       hiddenFields[id] = true;
@@ -139,7 +139,7 @@ const questionsReducer = (state, action) => {
             ...state.byId[id],
             formData: {
               ...state.byId[id].formData,
-              [field]: "",
+              [field]: '',
             },
             hiddenFields: {
               ...state.byId[id].hiddenFields,

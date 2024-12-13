@@ -1,8 +1,4 @@
-import {
-  FormControl,
-  Select as SelectInput,
-  MenuItem,
-} from "@mui/material";
+import { FormControl, Select as SelectInput, MenuItem } from '@mui/material';
 
 const Select = ({ question, options = [] }) => {
   return (
@@ -10,7 +6,9 @@ const Select = ({ question, options = [] }) => {
       <h4>{question}</h4>
       <SelectInput>
         {options.map((option) => (
-          <MenuItem key={option} value={option}>{option}</MenuItem>
+          <MenuItem key={option} value={option}>
+            {option}
+          </MenuItem>
         ))}
       </SelectInput>
     </FormControl>

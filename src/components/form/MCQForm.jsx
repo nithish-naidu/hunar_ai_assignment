@@ -1,10 +1,10 @@
-import { Box } from "@mui/material";
-import InputTextField from "../fields/InputTextField";
-import formConfigObj from "../../forms_config/multipleChoice";
-import { useQuestions } from "../../contexts/questions/context";
-import { QUESTION_ACTIONS } from "../../contexts/questions/reducer";
-import AutoCompleteField from "../fields/AutoCompleteField";
-import MultiSelectField from "../fields/MultiSelectField";
+import { Box } from '@mui/material';
+import InputTextField from '../fields/InputTextField';
+import formConfigObj from '../../forms_config/multipleChoice';
+import { useQuestions } from '../../contexts/questions/context';
+import { QUESTION_ACTIONS } from '../../contexts/questions/reducer';
+import AutoCompleteField from '../fields/AutoCompleteField';
+import MultiSelectField from '../fields/MultiSelectField';
 
 const MCQForm = ({ id }) => {
   const { state, dispatch } = useQuestions();

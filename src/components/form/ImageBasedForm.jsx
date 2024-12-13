@@ -1,10 +1,10 @@
-import { Box, Button, Typography } from "@mui/material";
-import InputTextField from "../fields/InputTextField";
-import formConfigObj from "../../forms_config/imageBased";
-import { useQuestions } from "../../contexts/questions/context";
-import { QUESTION_ACTIONS } from "../../contexts/questions/reducer";
-import CloseIcon from "@mui/icons-material/Close";
-import { validateOnChange } from "../../helper/validations";
+import { Box, Button, Typography } from '@mui/material';
+import InputTextField from '../fields/InputTextField';
+import formConfigObj from '../../forms_config/imageBased';
+import { useQuestions } from '../../contexts/questions/context';
+import { QUESTION_ACTIONS } from '../../contexts/questions/reducer';
+import CloseIcon from '@mui/icons-material/Close';
+import { validateOnChange } from '../../helper/validations';
 
 const ImageBasedForm = ({ id }) => {
   const { state, dispatch } = useQuestions();
@@ -59,7 +59,7 @@ const ImageBasedForm = ({ id }) => {
     });
     validateOnChangeImage(null);
     // Reset node value
-    document.getElementById(formConfigObj[0].id).value = "";
+    document.getElementById(formConfigObj[0].id).value = '';
   };
 
   return (
@@ -67,13 +67,13 @@ const ImageBasedForm = ({ id }) => {
       <Box
         sx={{
           py: 1,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
         }}
       >
         <Typography
-          color={Boolean(errorFormData[formConfigObj[0].id]) ? "red" : ""}
+          color={Boolean(errorFormData[formConfigObj[0].id]) ? 'red' : ''}
         >
           {formConfigObj[0].label}
         </Typography>
@@ -86,13 +86,13 @@ const ImageBasedForm = ({ id }) => {
           }
           endIcon={isImageUploaded ? <CloseIcon /> : <></>}
         >
-          {isImageUploaded ? formData[formConfigObj[0].id] : "UPLOAD IMAGE"}
+          {isImageUploaded ? formData[formConfigObj[0].id] : 'UPLOAD IMAGE'}
         </Button>
         <input
           id={formConfigObj[0].id}
           type="file"
           accept="image/png, image/jpeg, image/jpg"
-          style={{ display: "none" }}
+          style={{ display: 'none' }}
           onChange={uploadImageHandler}
         />
       </Box>

@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material";
+import { createTheme } from '@mui/material';
 
 const myTheme = createTheme({
   typography: {
@@ -6,18 +6,18 @@ const myTheme = createTheme({
   },
   palette: {
     primary: {
-      main: "#1976D2",
+      main: '#1976D2',
     },
   },
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          fontWeight: 600
-        }
-      }
-    }
-  }
-})
+          fontWeight: 600,
+        },
+      },
+    },
+  },
+});
 
-export default myTheme
+export default myTheme;

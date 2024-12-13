@@ -5,15 +5,15 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
-} from "@mui/material";
-import When from "../wrapper/When";
-import { QUESTION_TYPES } from "../../helper/constants";
-import FreeText from "./fields/FreeText";
-import Select from "./fields/Select";
-import YesNo from "./fields/YesNo";
-import ImageBased from "./fields/ImageBased";
-import { useQuestions } from "../../contexts/questions/context";
-import { QUESTION_ACTIONS } from "../../contexts/questions/reducer";
+} from '@mui/material';
+import When from '../wrapper/When';
+import { QUESTION_TYPES } from '../../helper/constants';
+import FreeText from './fields/FreeText';
+import Select from './fields/Select';
+import YesNo from './fields/YesNo';
+import ImageBased from './fields/ImageBased';
+import { useQuestions } from '../../contexts/questions/context';
+import { QUESTION_ACTIONS } from '../../contexts/questions/reducer';
 
 const Preview = () => {
   const { state, dispatch } = useQuestions();

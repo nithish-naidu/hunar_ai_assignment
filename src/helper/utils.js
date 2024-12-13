@@ -1,5 +1,5 @@
-import { getFormConfigObject } from "../contexts/questions/reducer";
-import { VALIDATION_TYPE } from "./validations";
+import { getFormConfigObject } from '../contexts/questions/reducer';
+import { VALIDATION_TYPE } from './validations';
 
 export const generateRandomID = () =>
   String(Math.ceil(Math.random() * 10000000));

@@ -4,16 +4,16 @@ import {
   Radio,
   RadioGroup,
   TextField,
-} from "@mui/material";
-import { useState } from "react";
-import When from "../../wrapper/When";
+} from '@mui/material';
+import { useState } from 'react';
+import When from '../../wrapper/When';
 
 const OPTIONS = {
-  YES: "Yes",
-  No: "No"
+  YES: 'Yes',
+  No: 'No',
 };
 
-const YesNo = ({ question, sub_question = "" }) => {
+const YesNo = ({ question, sub_question = '' }) => {
   const [selected, setSelected] = useState(null);
   return (
     <FormControl fullWidth>

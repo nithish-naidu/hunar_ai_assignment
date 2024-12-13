@@ -1,5 +1,5 @@
-import { Toolbar } from "@mui/material";
-import { HeaderAppBar, HeaderTitle } from "../../styles/components";
+import { Toolbar } from '@mui/material';
+import { HeaderAppBar, HeaderTitle } from '../../styles/components';
 
 const Header = ({ title }) => {
   return (

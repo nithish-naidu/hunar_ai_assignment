@@ -19,6 +19,18 @@ const MCQForm = ({ id }) => {
         newValue: value || event.target.value,
       },
     });
+
+    // Reset preferred_options when there's change in options
+    if (event.target.id === formConfigObj[1].id) {
+      dispatch({
+        type: QUESTION_ACTIONS.ON_FORM_FIELD_CHANGE,
+        payload: {
+          id,
+          field: formConfigObj[2].id,
+          newValue: [],
+        },
+      });
+    }
   };
 
   const onErrorHandler = (fieldId, errorMessage) => {

@@ -90,7 +90,11 @@ const Footer = () => {
       sx={{ top: 'auto', bottom: 0 }}
     >
       <Toolbar sx={{ justifyContent: 'flex-end' }}>
-        <Button variant="contained" onClick={onSaveHandler}>
+        <Button
+          variant="contained"
+          disabled={!state.allIds.length}
+          onClick={onSaveHandler}
+        >
           Save
         </Button>
       </Toolbar>

@@ -4,15 +4,15 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Technology Used
 
-- **React**: Used for building dynamic and responsive user interfaces with a component-based architecture.  
-- **useReducer**: Implemented for state management to handle complex state logic with a predictable and organized structure.  
-- **Material UI**: Utilized for designing professional and modern interfaces with pre-styled components and customizable theming.  
+- **React**: Used for building dynamic and responsive user interfaces with a component-based architecture.
+- **useReducer**: Implemented for state management to handle complex state logic with a predictable and organized structure.
+- **Material UI**: Utilized for designing professional and modern interfaces with pre-styled components and customizable theming.
 
 ## Screen Shots
 
-![Screenshot 1](screenshots/joq_query_1.png "Form Builder 1")
-![Screenshot 2](screenshots/joq_query_2.png "Form Builder 2")
-![Screenshot 3](screenshots/job_query_preview.png "Form Preview")
+![Screenshot 1](screenshots/joq_query_1.png 'Form Builder 1')
+![Screenshot 2](screenshots/joq_query_2.png 'Form Builder 2')
+![Screenshot 3](screenshots/job_query_preview.png 'Form Preview')
 
 ## Available Scripts
 
@@ -44,4 +44,3 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ### `npm run format`
 
 Code formatting with Prettier ensures consistency across a codebase, making it easier for teams to read, maintain, and collaborate effectively. It automates styling decisions, reducing debates over code style and improving developer productivity.
-

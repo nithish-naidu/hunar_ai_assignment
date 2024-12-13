@@ -44,9 +44,7 @@ const YesNoForm = ({ id }) => {
         value={formData[formConfigObj[0].id]}
         onChange={onChangeHandler}
         onError={onErrorHandler}
-        hasError={Boolean(
-          String(errorFormData[formConfigObj[0].id]).trim().length
-        )}
+        hasError={Boolean(errorFormData[formConfigObj[0].id])}
         errorMessage={errorFormData[formConfigObj[0].id]}
         helperText={formConfigObj[0].helperText}
       />
@@ -64,11 +62,9 @@ const YesNoForm = ({ id }) => {
             value={formData[formConfigObj[1].id]}
             onChange={onChangeHandler}
             onError={onErrorHandler}
-            hasError={Boolean(
-              String(errorFormData[formConfigObj[1].id]).trim().length
-            )}
+            hasError={Boolean(errorFormData[formConfigObj[1].id])}
             errorMessage={errorFormData[formConfigObj[1].id]}
-            helperText={formConfigObj[0].helperText}
+            helperText={formConfigObj[1].helperText}
           />
         </QuestionWrapper>
       </When>
